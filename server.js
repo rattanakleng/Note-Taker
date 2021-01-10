@@ -15,14 +15,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // makes public folder available to user 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Route
 
 app.get("/api/notes", function (req, res) {
 
     // Use the fs module to read the file 
-    fs.readFile(path.join(__dirname + "./db/db.json"), "utf8", function (err, data) {
+    fs.readFile(path.join(__dirname + "/db/db.json"), "utf8", function (err, data) {
         if (err) throw err;
 
         // Parse the file contents with JSON.parse() to get the real data
@@ -43,7 +43,7 @@ app.post("/api/notes", function (req, res) {
     newNote.id = uniqid.time();
 
     // use fs module to read the file
-    fs.readFile(path.join(__dirname + "./db/db.json"), "utf8", function (err, data) {
+    fs.readFile(path.join(__dirname + "/db/db.json"), "utf8", function (err, data) {
         if (err) throw err;
 
         // parse file contents with JSON.parse() to get real data and return as JSON
@@ -52,7 +52,7 @@ app.post("/api/notes", function (req, res) {
         let allNotesString = JSON.stringify(allNotes);
 
         // add new note to db.json and refresh page
-        fs.writeFile(path.join(__dirname + "./db/db.json"), allNotesString, function (err) {
+        fs.writeFile(path.join(__dirname + "/db/db.json"), allNotesString, function (err) {
             if (err) throw err;
             res.json(allNotes);
         });
@@ -66,7 +66,7 @@ app.delete("/api/notes/:id", function (req, res) {
     const idToDelete = req.params.id;
 
     // use fs.readFile to get all note data and parse the data
-    fs.readFile(path.join(__dirname + "./db/db.json"), "utf8", function (err, data) {
+    fs.readFile(path.join(__dirname + "/db/db.json"), "utf8", function (err, data) {
         if (err) throw err;
 
         let existNotes = JSON.parse(data);
@@ -79,7 +79,7 @@ app.delete("/api/notes/:id", function (req, res) {
         let existNotesString = JSON.stringify(filteredNotes);
 
         // add updated notes to db.json and refresh page
-        fs.writeFile(path.join(__dirname + "./db/db.json"), existNotesString, function (err) {
+        fs.writeFile(path.join(__dirname + "/db/db.json"), existNotesString, function (err) {
             if (err) throw err;
             res.json(existNotesString);
         });
