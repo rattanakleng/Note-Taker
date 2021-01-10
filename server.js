@@ -92,9 +92,8 @@ app.get("/notes", function (req, res) {
 
 // Basic route that sends the user to the AJAX Page
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname,"public/index.html"));
+    res.sendFile(path.join(__dirname, "public/index.html"));
 });
-
 //start the server to begin listening
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
