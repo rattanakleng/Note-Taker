@@ -1,7 +1,7 @@
 //Dependencie
 const express = require("express");
-const path = require("path");
 const fs = require("fs");
+const path = require('path');
 
 // require uniqid dependency for creating unique id for each new note
 const uniqid = require('uniqid');
@@ -85,12 +85,12 @@ app.delete("/api/notes/:id", function (req, res) {
     });
 });
 
-// route that send notes.html to user
+// route sends notes.html to user
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
-// Basic route that sends the user to the AJAX Page
+// Basic route sends the user to the AJAX Page
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });

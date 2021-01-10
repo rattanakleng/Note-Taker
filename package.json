@@ -19,7 +19,8 @@
     "url": "https://github.com/rattanakleng/Note-Taker/issues"
   },
   "homepage": "https://github.com/rattanakleng/Note-Taker#readme",
-  "devDependencies": {
+ 
+  "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "uniqid": "^5.2.0"
