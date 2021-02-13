@@ -14,4 +14,4 @@ https://notetaker-xpress.herokuapp.com
 ![index-page](https://user-images.githubusercontent.com/29310963/107843550-e8912580-6d80-11eb-88ad-5a0abbf87558.jpg)
 
 ### Note page
-![Notes page image](./assets/notes-page-image.png)
+![note-page](https://user-images.githubusercontent.com/29310963/107843568-1ecea500-6d81-11eb-8fef-294a0fa65b37.jpg)
