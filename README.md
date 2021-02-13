@@ -11,7 +11,7 @@ https://notetaker-xpress.herokuapp.com
 
 ## Page Layout Images
 ### Index page
-![Index page image](./assets/index-page-image.png)
+![index-page](https://user-images.githubusercontent.com/29310963/107843550-e8912580-6d80-11eb-88ad-5a0abbf87558.jpg)
 
 ### Note page
 ![Notes page image](./assets/notes-page-image.png)
